@@ -1,5 +1,5 @@
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -405,7 +405,9 @@ body {
         padding: 0;
     }
 
-    .columns {}
+    .columns {
+        min-height: 180px;
+    }
 }
 
 @media (max-width: 991px) {
