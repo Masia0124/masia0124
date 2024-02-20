@@ -33,7 +33,9 @@ html {
 
 body {
     --theme-sheet-width-xl: 1140px;
+    --theme-sheet-width-lg: 940px;
     --theme-sheet-width-md: 720px;
+    --theme-sheet-width-xs: 340px;
     height: auto;
     min-height: 100%;
     position: relative;
@@ -408,6 +410,14 @@ body {
     .columns {
         min-height: 180px;
     }
+
+    .columns {
+        width: var(--theme-sheet-width-lg);
+    }
+
+    .secrion-2 {
+        width: var(--theme-sheet-width-lg);
+    }
 }
 
 @media (max-width: 991px) {
@@ -430,17 +440,24 @@ body {
     .columns {
         grid-template-columns: repeat(2, calc(50% - 15.5px));
         min-height: 454px;
+        width: var(--theme-sheet-width-md);
+        margin-bottom: 0;
+        padding-bottom: 60px;
     }
 
     .list_3 {
         min-height: 444px;
         grid-template-columns: repeat(2, calc(50% - 9.99997px));
     }
+
+    .secrion-2 {
+        width: var(--theme-sheet-width-md);
+    }
 }
 
 @media (max-width: 767px) {
     .container_02 {
-        width: 540px;
+        min-height: 425px;
     }
 
     img {
@@ -452,28 +469,84 @@ body {
         margin: 0;
         padding: 0;
     }
+
+    .columns {
+        width: var(--theme-sheet-width-md);
+    }
+
+    .secrion-2 {
+        width: var(--theme-sheet-width-md)
+    }
+
 }
 
 @media (max-width: 575px) {
     .container_02 {
-        width: 100%;
+        min-height: 1422px;
     }
 
-    img {
+    .section-pizza_title {
+        width: var(--theme-sheet-width-xs);
+    }
+
+    .section-pizza_text {
         width: auto;
-        max-width: 100%;
+        width: var(--theme-sheet-width-xs);
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .button {
+        flex-wrap: wrap;
+    }
+
+    .section-pizza_b {
+        margin: 10px;
     }
 
     .columns {
         grid-template-columns: 100%;
+        width: var(--theme-sheet-width-xs);
+        margin-bottom: 0;
+        padding-bottom: 60px;
     }
 
     .list_3 {
         grid-template-columns: 100%;
     }
 
-    body {
-        margin: 0;
-        padding: 0;
+    .secrion-2 {
+        width: var(--theme-sheet-width-xs);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        min-height: fit-content;
+        max-width: 100%;
+
+    }
+
+    .section-3 {
+        height: auto;
+    }
+
+    .part-1 {
+        min-width: 100%;
+        padding: 30px 10px 30px 10px;
+    }
+
+    .part-2 {
+        min-width: 100%;
+        padding: 30px 10px 30px 10px;
+    }
+
+    .section-3_list {
+        width: 340px;
+        padding-bottom: 30px;
+    }
+
+    .list_3 {
+        margin-top: 60px;
+        grid-template-columns: 100%;
     }
 }
