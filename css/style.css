@@ -550,3 +550,10 @@ body {
         grid-template-columns: 100%;
     }
 }
+
+@supports(padding: max(0px)) {
+    .post {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+}
